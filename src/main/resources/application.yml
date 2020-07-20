@@ -1,0 +1,14 @@
+spring:
+  datasource:
+    driver-class-name: oracle.jdbc.OracleDriver
+    username: hduser
+    password: hduser
+    url: jdbc:oracle:thin:@localhost:1521:orcl
+mybatis-plus:
+  configuration:
+    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl #打印完整的操作记录信息，包括sql语句
+  type-enums-package: com.mp.study.bilibilimybatisplus.enums #枚举类配置，只有有此配置，才能正确的将数据库存的数转换为对应的属性
+  global-config:
+    db-config:
+      logic-delete-value: 1 #逻辑删除时值
+      logic-not-delete-value: 0 #逻辑未删除时值
